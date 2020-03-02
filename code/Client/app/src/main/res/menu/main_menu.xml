@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/serverConnectItem"
+        android:icon="@drawable/connect"
+        android:title="Connect"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/barActivity"
+        android:title="Today's Weather"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/PieActivity"
+        android:title="Analysis Weather"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/lineActivity"
+        android:title="Recent Weather by region"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/recordActivity"
+        android:title="Records"
+        app:showAsAction="never"/>
+
+
+</menu>

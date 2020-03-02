@@ -1,0 +1,21 @@
+1.이클립스 코드(Server)
+	1)다음과 같은 4개의 Library를 사용      
+		mysql-connector-java-5.1.40-bin.jar -mysql 연동을 위한 라이브러리
+		jdom-2.0.6\jdom-2.0.6.jar - 기상청에서 제공하는 data를 파싱하기 위한 라이브러리
+		json_simple-1.1.jar -weather planet에서 제공하는 data를 파싱하기 위한 라이브러리
+		commons-io-2.5.jar - weather Planet 사용할때 쓴 라이브러리
+	2)Server package의 Server.java를 컴파일 하게 되면 서버가 동작
+	3)필요에 따라 DataBase의 Main.java를 컴파일 하여 mySQL DataBase에 데이터 추가 가능
+
+
+2.안드로이드 코드(Client)	
+	1)안드로이드에서 다양한 그래프를 나타내기 위한 mpandroidchartlibrary-2-2-4.jar을 사용
+	2)처음 클라이언트를 실행한 뒤 우측 상단의 Connect 메뉴를 클릭하면 서버로 부터 24개 도시의 날씨를 받아와 마커로 표시(최고기온, 최저기온은 MarkerInfo형태로 표시됨)
+	3)우측 상단의 메뉴바에서 Today's Weather 버튼을 클릭하게 되면 24개 도시의 날씨를 barGraph형태로 나타냄
+	4)우측 상단의 메뉴바에서 Analysis Weather 버튼을 클릭하게 되면 24개 도시의 7일간의 날씨를 받아와 pieGraph형태로 나타냄
+		(그 7일간 '맑음', '구름조금'이 차지하는 비율이 높은 도시일 수록 pieGraph에서의 높은 지분률을 가짐)-> pieGraph에서 높은 지분률을 가질수록 7일간의 날씨중 화창했던 날이 더 많았다는 의미
+	5)우측 상단의 메뉴바에서 Recent Weather by region버튼을 클릭하게 되면 24개 도시의 이름이 있는 dialog가 나타나고, 그중 한 지역을 클릭하면 7일간의 날씨를 구체적으로 확인할 수 있는 Activity가 생성
+		(상단의 점선은 해당 지역이 속한 지방의 폭염 기준을, 하단의 점선은 한파 기준을 의미)
+ 	6)맵의 특정 지역을 Long Click하게 되면 해당 지점의 위,경도를 이용해 서버가 SK Planet으로 부터 날씨 정보를 받아와 dialog르 표시
+		(이 역시 해당 위,경도가 속한 지방의 경보 정보를 join해 그 경보가 발생해야 하는지 아닌지를 O,X로 표시하여 나타냄)
+	7)위의 2~6의 기능을 수행하기 위해서는 반드시 먼저 Connect 버튼을 클릭하여 서버에 연결이 되어야 합니다.
